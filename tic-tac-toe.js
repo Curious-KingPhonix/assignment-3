@@ -10,5 +10,13 @@
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
-// limitations under the License.
-
+// limitations under the License.       
+function initalize(){
+    const board_tiles = document.querySelector('#board').children
+    for( i = 0 ; i < board_tiles.length ; i++){
+        board_tiles[i].setAttribute("class","square")
+    }
+}
+if (document.readyState !== 'loading') {
+    initalize();
+} else { document.addEventListener('DOMContentLoaded', initalize);}
